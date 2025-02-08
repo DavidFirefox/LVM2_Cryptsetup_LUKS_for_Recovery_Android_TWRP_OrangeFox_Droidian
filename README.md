@@ -2,11 +2,12 @@ LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian
 ===============
 LVM2 and CRYPTSETUP BINARY for use on ANDROID RECOVERY : TWRP and ORANGEFOX (and building guide)
 
-Nowdays phones are high-performance, so they can operate a real computer Linux OS (in replacement of Android). So we can install Droidian (a phone version of Debian), UBTouch (based on Ubuntu), PostmarketOS, Sailfish ... 
-Droidian (due to the max number of partitions in GPT table, the fact of certain phone manufacturer uses all of possible partitions, and probably Droidian team found other advantages.) use LVM partitioning system.
+Nowdays phones are high-performance, so they can operate a real computer Linux OS (in replacement of Android). So we can install Droidian (a phone version of Debian), UBTouch (based on Ubuntu), PostmarketOS, Sailfish ...
+
+Droidian (due to the max number of partitions in GPT table, the fact of certain phone manufacturer uses all of possible partitions, and probably Droidian team found other advantages.) use LVM partitioning system.\
 LVM is a way to make many logical volumes on only one physical partition, with a lot of advanced functions.
 
-So when we use Droidian on a phone, the TWRP and OrangeFox recovery can read the Droidian partition that contain system and user data.
+So when we use Droidian on a phone, the TWRP and OrangeFox recovery can read the Droidian partition that contain system and user data.\
 So we can't read it in recovery, and we cant backup it. If Droidian crash we lost all data's and system data. (We can't physically extract the memory of the phone, so we need a recovery with LVM !)
 
 For some users we are finding a way to easily add LVM to existing recovery. (Old LVM binary exist in 2013)
@@ -22,7 +23,7 @@ LVM2
 What's in the tree:
 
 ## lvm-bin/
-Prebuilt LVM2 binary -> Tested in OrangeFox, Works !
+Prebuilt LVM2 binary -> Tested in OrangeFox, Works !\
 ~~(support scripts, and sample lvm.conf file.)~~ -> TO DO
 
 This is a lvm2-2_03_30 arm64 version prebuilt. It is built for Android (Release : 2025/01/14). First thanks in advance for steven676's 
@@ -49,8 +50,8 @@ umount /mnt/droidian/
 ```
 
 ### /!\ Mounting Logical Volume as /data (in test) /!\
-/data already have few folders but is not link to the userdata Drodian Logical Volume, so I try in OrangeFox to mount Droidian-LV on data.
-It works and it permits to directly backup and restore Droidian system and data. And to backup all partitions (boot, super, ...) in the internal SD.
+/data already have few folders but is not link to the userdata Drodian Logical Volume, so I try in OrangeFox to mount Droidian-LV on data.\
+It works and it permits to directly backup and restore Droidian system and data. And to backup all partitions (boot, super, ...) in the internal SD.\
 You have to make /data/media folder for using the Droidian Logical Volume as internal SD.
 ```
 mount /dev/droidian/droidian-rootfs /data
