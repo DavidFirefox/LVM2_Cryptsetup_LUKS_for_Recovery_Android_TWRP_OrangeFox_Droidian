@@ -26,9 +26,9 @@ What's in the tree:
 Prebuilt LVM2 binary -> Tested in OrangeFox, Works !\
 ~~(support scripts, and sample lvm.conf file.)~~ -> TO DO
 
-This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : 2025/01/14).\ 
-First thanks in advance for steven676's instruction (Address at https://github.com/steven676/android-lvm-mod/blob/master/HOWTO-BUILD).\
-And thanks in advance for sillaboy's instruction (Address at https://github.com/sillaboy/Lvm_for_Android/blob/master/README-HowToBuild)
+This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : 2025/01/14).\
+First thanks in advance for steven676's instruction (Address at https://github.com/steven676/android-lvm-mod/blob/master/HOWTO-BUILD).  
+And thanks in advance for sillaboy's instruction (Address at https://github.com/sillaboy/Lvm_for_Android/blob/master/README-HowToBuild).
 
 ### Use LVM2 on Recovery
 You just have to copy it on recovery (/system/bin) and execute it !
