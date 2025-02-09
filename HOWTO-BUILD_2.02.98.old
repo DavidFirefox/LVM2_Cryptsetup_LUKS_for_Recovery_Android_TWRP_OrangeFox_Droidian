@@ -1,4 +1,6 @@
-BUILDING LVM2 FOR USE ON ANDROID
+WARNING : THIS IS AN OUTDATED WAY ! BUT IT IS USE CROSS COMPILATION
+
+BUILDING LVM2 FOR USE ON ANDROID - v 2.02.98 - steven676 - 2012/10/15 
 
 The LVM source was written for standard glibc-based GNU/Linux systems,
 and doesn't build agains Android libc.  We could invest time and effort
