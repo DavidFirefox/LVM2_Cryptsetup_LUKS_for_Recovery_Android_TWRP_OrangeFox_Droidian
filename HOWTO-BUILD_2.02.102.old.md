@@ -1,7 +1,7 @@
 WARNING : THIS IS AN OUTDATED WAY ! BUT IT IS USE CROSS COMPILATION
 ===============
 
-v 2.20.102 - v lvm2-2_20_102 - sillaboy - 2014/12/31 
+v 2.02.102 - v lvm2-2_02_102 - sillaboy - 2014/12/31 - ERROR in version number, in the file
 https://github.com/sillaboy/Lvm_for_Android/blob/master/README-HowToBuild
 
 BUILDING LVM2 FOR USE ON ANDROID
