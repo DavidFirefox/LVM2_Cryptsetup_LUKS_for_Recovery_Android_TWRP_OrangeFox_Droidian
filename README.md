@@ -23,7 +23,7 @@ LVM2
 What's in the tree:
 
 ## lvm-bin/
-Prebuilt LVM2 binary -> Tested in OrangeFox, Works !\
+Prebuilt LVM2 binary -> Tested in OrangeFox (mount LVM Logic Volume, Create Logic Volume, Resize Logic Volume), Works !\
 ~~(support scripts, and sample lvm.conf file.)~~ -> TO DO
 
 This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : 2025/01/14).\
@@ -31,9 +31,25 @@ First thanks in advance for steven676's instruction (Address at https://github.c
 And thanks in advance for sillaboy's instruction (Address at https://github.com/sillaboy/Lvm_for_Android/blob/master/README-HowToBuild).
 
 ### Use LVM2 on Recovery
-You just have to copy it on recovery (/system/bin) and execute it !
+I copy lvm-build folder (in lvm_2.03.30_build_arm64.tar.gz, in lvm-bin git folder) in cache partition.  
+Boot in recovery (the cache partition is in /cache on recovery)  
+Copy binary file on /system/bin :   
 ```
+cd /cache/lvm-build/lvm/sbin/
+mv lvm lvm.pc
+cp lvm.static lvm
+mv dmstats dmstats.pc
+cp dmstats.static dmstats
+mv dmsetup dmsetup.pc
+cp dmsetup.static dmsetup
 chmod +x lvm
+chmod +x dmstats
+chmod +x dmsetup
+cp * /system/bin/
+```
+We just use .static binary  
+
+```
 lvm vgscan --mknodes # Show and permit use of Volume Group using LVM2 (you will see : "droidian" for Droidian installation)
 lvm vgchange -aly # Show the number (and permit use) of Logical Volumes (you will see : 3 for Droidian)
 ```
@@ -67,6 +83,39 @@ Please umount before leaving Recovery !
 umount /data
 ```
 
+### Use CRYPTSETUP/LUCK on Recovery - TO BE FINISH 
+I copy cryptsetup folder (in cryptsetup_2.7.5_build_arm64.tar.gz, in cryptsetup-bin git folder) in cache partition.  
+Boot in recovery (the cache partition is in /cache on recovery)  
+Copy binary file on /system/bin, you have to copy LVM2 binary (see Lse LVM2 on Recovery) :   
+```
+cd /cache/cryptsetup/usr/sbin/
+mv cryptsetup cryptsetup.pc
+cp cryptsetup.static cryptsetup
+mv integritysetup integritysetup.pc
+cp integritysetup.static integritysetup
+mv veritysetup veritysetup.pc
+cp veritysetup.static veritysetup
+chmod +x cryptsetup
+chmod +x integritysetup
+chmod +x veritysetup
+cp * /system/bin/
+mkdir /run 
+mkdir /run/cryptsetup
+```
+I make a new Logcial Volume to test cryptsetup.  
+```
+cryptsetup luksFormat /dev/droidian/Test
+cryptsetup luksOpen /dev/droidian/Test RAB -v
+```   
+I have error with luksOpen :  
+```   
+No usable token is available.
+Enter passphrase for /dev/droidian/Test: 
+device-mapper: reload ioctl on RAB (253:10) failed: Invalid argument
+Command failed with code -5 (device already exists or device is busy).
+```   
+
+
 NOT MODIFY
 ==============
 
@@ -95,5 +144,5 @@ Questions or comments can be addressed to
 
 TO DO
 ==============
-CRYPTSETUP/LUCK
+CRYPTSETUP/LUCK Not works !
 
