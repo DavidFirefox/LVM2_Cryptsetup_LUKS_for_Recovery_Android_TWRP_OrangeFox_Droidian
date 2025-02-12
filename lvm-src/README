@@ -1,1 +1,10 @@
-Readme
+Sources :
+
+- LVM2 source lvm2-2_03_30 or lvm2-2.03.30
+Build instruction : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD.md
+https://github.com/lvmteam/lvm2/releases/tag/v2_03_30
+or :
+ftp://sourceware.org/pub/lvm2/LVM2.2.03.30.tgz
+
+- LVM2 source tree 2.02.98 : lvm-bin of steven676 source (2012/10/15)
+  Build instruction : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD_2.02.98.old
