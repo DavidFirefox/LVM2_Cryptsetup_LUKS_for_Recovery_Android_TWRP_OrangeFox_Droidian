@@ -67,6 +67,16 @@ Please umount before leaving Recovery !
 umount /mnt/droidian/
 ```
 
+### Use LVM2 on Recovery with INSTALL ZIP
+Recovery can directly install files and execute code from an .zip\  
+I make a recovery install zip. It automatically copy LVM2 and Cryptsetup binary file in /system/sbin (the recovery directory)\  
+The recovery file system is in read-only, so you have to execute it each time you boot the recovery.\  
+You just have to mount the file system.\  
+Like in the next part (Mounting Logical Volume as /data)\  
+I have errors due to ui_print but it is safe ! (If you have solutions, I will correct)\  
+The file is in recovery folder.\  
+
+
 ### Mounting Logical Volume as /data (in test)
 /data already have few folders but is not link to the userdata Drodian Logical Volume, so I try in OrangeFox to mount Droidian-LV on data.\
 I suggest rename /data in /data2 to before mounting the volume.\
