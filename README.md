@@ -28,7 +28,7 @@ What's in the tree:
 Prebuilt LVM2 binary -> Tested in OrangeFox (mount LVM Logic Volume, Create Logic Volume, Resize Logic Volume), Works !\
 ~~(support scripts, and sample lvm.conf file.)~~ -> TO DO
 
-This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : 2025/01/14).\
+This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : v2.03.30 - 2025/01/14).\
 First thanks in advance for steven676's instruction (Address at https://github.com/steven676/android-lvm-mod/blob/master/HOWTO-BUILD).  
 And thanks in advance for sillaboy's instruction (Address at https://github.com/sillaboy/Lvm_for_Android/blob/master/README-HowToBuild).
 
@@ -130,15 +130,25 @@ device-mapper: reload ioctl on RAB (253:10) failed: Invalid argument
 Command failed with code -5 (device already exists or device is busy).
 ```   
 
-
-NOT MODIFY
-==============
+## cryptsetup-bin/
+Prebuilt v2.7.5 binary for recovery arm64.  It is built for Android (Release : v2.7.5 - 2024/09/03)  
+Please look at the previous part : Use CRYPTSETUP/LUCK on Recovery
 
 ## lvm-src/
-LVM2 source code. (If this directory is empty, do
-git submodule init
-git submodule update
-to fetch the source.)
+LVM2 source code (lvm2-2.03.30 (2025/01/14) and 2.02.98 (2012/10/15)  
+Build instructions : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD.md
+
+## cryptsetup-src/
+Cryptsetup source code (Release : v2.7.5 - 2024/09/03)  
+Build instructions : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD.md
+
+## HOWTO-BUILD
+Information on how to build the LVM2 source and Cryptsetup for use on Android.  
+Build instructions : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD.md
+
+
+NOT MODIFY (from fork)
+==============
 
 ## devices/
 Sample lvm.conf and init.rc scripts for particular devices.
@@ -146,9 +156,6 @@ Sample lvm.conf and init.rc scripts for particular devices.
 ## HOWTO-MOD
 Information on how to modify a ROM and recovery for a device to use
 LVM2.
-
-## HOWTO-BUILD
-Information on how to build the LVM2 source for use on Android.
 
 LICENSE
 Licensing information for the components.
