@@ -34,7 +34,7 @@ So it is equivalent of Debian 13 Trixie, instructions will be similar for Debian
 gcc (Debian 14.2.0-8) 14.2.0
 
 3. lvm version  
-lvm2-2_03_30 or lvm2-2.03.30
+lvm2-2_03_30 or lvm2-2.03.30 (2025/01/14)
 
 I directly build on a ARM64 Debian, so I not use cross compilation.
 For cross compilation howto please read : https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD_2.02.102.old.md or https://github.com/DavidFirefox/LVM2_Cryptsetup_LUKS_for_Recovery_Android_TWRP_OrangeFox_Droidian/blob/testing2/HOWTO-BUILD_2.02.98.old
@@ -50,7 +50,7 @@ And g++-arm-linux-gnueabi g++-arm-linux-gnueabihf are not need
 Try to install it if it doesn't work.  
    
 2. Download the LVM2 source.  
-I choose lvm2-2.03.30  
+I choose lvm2-2.03.30 (2025/01/14)  
 https://github.com/lvmteam/lvm2/releases/tag/v2_03_30  
 or :  
 ftp://sourceware.org/pub/lvm2/LVM2.2.03.30.tgz  
