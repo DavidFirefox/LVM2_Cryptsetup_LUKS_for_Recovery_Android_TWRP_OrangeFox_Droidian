@@ -17,6 +17,8 @@ Some users use Cryptsetup/LUCK for encrypting the disk (it seems it can be use f
 
 So the goal is to have LVM2 and Cryptsetup/LUCK on Recovery. 
 
+Disclaimer : We just share our work, it is give "as is" ! ALL IS PROVIDED “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
 LVM2
 ==============
 
@@ -65,11 +67,14 @@ Please umount before leaving Recovery !
 umount /mnt/droidian/
 ```
 
-### /!\ Mounting Logical Volume as /data (in test) /!\
+### Mounting Logical Volume as /data (in test)
 /data already have few folders but is not link to the userdata Drodian Logical Volume, so I try in OrangeFox to mount Droidian-LV on data.\
+I suggest rename /data in /data2 to before mounting the volume.\
 It works and it permits to directly backup and restore Droidian system and data. And to backup all partitions (boot, super, ...) in the internal SD.\
 You have to make /data/media folder for using the Droidian Logical Volume as internal SD.
 ```
+mv /data /data2
+mkdir /data
 mount /dev/droidian/droidian-rootfs /data
 ```
 
