@@ -26,6 +26,7 @@ What's in the tree:
 
 ## lvm-bin/
 Prebuilt LVM2 binary -> Tested in OrangeFox (mount LVM Logic Volume, Create Logic Volume, Resize Logic Volume), Works !\
+Tested in TWRP (mount LVM Logic Volume, Resize Logic Volume), Works !\
 ~~(support scripts, and sample lvm.conf file.)~~ -> TO DO
 
 This is a lvm2-2_03_30 arm64 version prebuilt and optymisez for armv8. It is built for Android (Release : v2.03.30 - 2025/01/14).\
@@ -128,7 +129,9 @@ No usable token is available.
 Enter passphrase for /dev/droidian/Test: 
 device-mapper: reload ioctl on RAB (253:10) failed: Invalid argument
 Command failed with code -5 (device already exists or device is busy).
-```   
+```
+If I format part with NTFS and after I format it with f2fs, format say the partition is an NTFS one.  
+So the crypted partition is open and readable. We just can't mount it.  
 
 ## cryptsetup-bin/
 Prebuilt v2.7.5 binary for recovery arm64.  It is built for Android (Release : v2.7.5 - 2024/09/03)  
